@@ -21,8 +21,6 @@ use Drupal\Core\Render\Element;
  */
 function template_preprocess_user_points(array &$variables) {
   // Fetch UserPoints Entity Object.
-  $user_points = $variables['elements']['#user_points'];
-
   // Helpful $content variable for templates.
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];

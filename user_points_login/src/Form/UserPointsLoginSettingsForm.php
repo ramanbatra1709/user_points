@@ -4,10 +4,10 @@ namespace Drupal\user_points_login\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use \Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Class UserPointsLoginSettingsForm
+ * Class UserPointsLoginSettingsForm.
  *
  * @package Drupal\login_security\Form
  */
@@ -25,7 +25,7 @@ class UserPointsLoginSettingsForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'user_points_login.settings'
+      'user_points_login.settings',
     ];
   }
 
@@ -34,21 +34,21 @@ class UserPointsLoginSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state, Request $request = NULL) {
     $config = $this->config('user_points_login.settings');
-    $form['login_points'] = array(
+    $form['login_points'] = [
       '#type' => 'number',
       '#min' => 0,
       '#title' => $this->t('Points Awarded'),
       '#default_value' => $config->get('login_points'),
-      '#description' => t('No. of points rewarded after a user logs in'),
-    );
-    $form['frequency'] = array(
+      '#description' => $this->t('No. of points rewarded after a user logs in'),
+    ];
+    $form['frequency'] = [
       '#type' => 'number',
       '#min' => 1,
       '#title' => $this->t('Frequency'),
       '#default_value' => $config->get('frequency'),
-      '#description' => t('No. of hours after which points are rewarded'),
-    );
-    return parent::buildForm($form,$form_state);
+      '#description' => $this->t('No. of hours after which points are rewarded'),
+    ];
+    return parent::buildForm($form, $form_state);
   }
 
   /**
@@ -61,4 +61,5 @@ class UserPointsLoginSettingsForm extends ConfigFormBase {
       ->save();
     parent::submitForm($form, $form_state);
   }
+
 }

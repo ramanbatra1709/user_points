@@ -19,8 +19,6 @@ class UserPointsForm extends ContentEntityForm {
     /* @var $entity \Drupal\user_points\Entity\UserPoints */
     $form = parent::buildForm($form, $form_state);
 
-    $entity = $this->entity;
-
     return $form;
   }
 

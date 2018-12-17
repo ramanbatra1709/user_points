@@ -12,9 +12,10 @@ INTRODUCTION
 ------------
 
 User Points module provides an entity to store the points accumulated by a user.
-It provides API functions for storing/removing points for various scenarios such as
-Login, Register, Posting Comment or Creating an Article. Points can be easily retrieved
-using API functions and use for various promotional stuff in the website.
+It provides API functions for storing/removing points for various scenarios such
+as Login, Register, Posting Comment or Creating an Article. Points can be easily
+retrieved using API functions and use for various promotional stuff in the
+website.
 
  * For a full description of the module, visit the project page:
    https://www.drupal.org/project/user_points

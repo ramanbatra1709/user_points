@@ -13,8 +13,6 @@ use Drupal\user\EntityOwnerInterface;
  */
 interface UserPointsInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
-  // Add get/set methods for your configuration properties here.
-
   /**
    * Gets the User points name.
    *
@@ -67,7 +65,8 @@ interface UserPointsInterface extends ContentEntityInterface, EntityChangedInter
    * Sets the published status of a User points.
    *
    * @param bool $published
-   *   TRUE to set this User points to published, FALSE to set it to unpublished.
+   *   TRUE to set this User points to published, FALSE to set it to
+   *   unpublished.
    *
    * @return \Drupal\user_points\Entity\UserPointsInterface
    *   The called User points entity.
